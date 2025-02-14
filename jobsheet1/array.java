@@ -6,22 +6,19 @@ public class array {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double nilai[][] = new double[8][2];
+        String namaMatkul[] = new String[8];
+
+        for(int i = 0; i < namaMatkul.length; i++){
+
+            System.out.println("Masukkan nama Mata kuliah ke-" + (i+1));
+            namaMatkul[i] = sc.nextLine();
+        }
         
-        System.out.print("Masukkan Nilai Pancasila: ");
-        nilai[0][0] = sc.nextDouble();        
-        System.out.print("Masukkan Nilai Pancasila: ");
-        nilai[1][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Pancasila: ");
-        nilai[2][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Konsep Teknologi Informasi: ");
-        nilai[3][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Critical Thinking and Problem Solving: ");
-        nilai[4][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Matematika Dasar: ");
-        nilai[5][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Pancasila: ");
-        nilai[6][0] = sc.nextDouble();
-        System.out.print("Masukkan Nilai Pancasila: ");
-        nilai[7][0] = sc.nextDouble();
+        for(int i = 0; i < namaMatkul.length; i++){
+
+            System.out.print("Masukkan Nilai " + namaMatkul[i] +": ");
+            nilai[i][0] = sc.nextDouble();        
+        }
+        
     }
 }
