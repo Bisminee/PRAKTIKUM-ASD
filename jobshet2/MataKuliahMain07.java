@@ -14,6 +14,8 @@ public class MataKuliahMain07 {
         matkul1.ubahSKS(sksBaru);
         matkul1.tambahJam(jam);
         matkul1.kurangJam(jam);
+        matkul1.tampilInformasi();
+        
 
         MataKuliah07 matkul2 = new MataKuliah07("12345", "Matematika", 2, 4);
         matkul2.tampilInformasi();
