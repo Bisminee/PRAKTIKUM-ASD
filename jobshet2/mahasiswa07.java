@@ -1,5 +1,5 @@
 
-public class mahasiswa07 {
+public class Mahasiswa07 {
 
     String nama;
     String nim;
