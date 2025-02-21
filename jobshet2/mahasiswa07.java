@@ -1,10 +1,12 @@
 
+
 public class Mahasiswa07 {
 
     String nama;
     String nim;
     String kelas;
     double ipk;
+
     
     void tampilkanInformasi(){
         System.out.println("Nama: " + nama);
@@ -16,11 +18,11 @@ public class Mahasiswa07 {
     void ubahKelas(String kelasBaru){
         kelas = kelasBaru;
     }
-
+    
     void updateIPK(double ipkBaru){
         ipk = ipkBaru;
     }
-
+    
     String nilaiKinerja(){
         if(ipk >= 3.5){
             return "Kinerja sangat baik";
@@ -31,5 +33,16 @@ public class Mahasiswa07 {
         }else {
             return "Kinerja kurang";
         }
+    }
+    
+    public Mahasiswa07(){
+    
+    }
+    
+    public Mahasiswa07(String nm, String nim, double ipk, String kls){
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk;
+        kelas = kls;
     }
 }
