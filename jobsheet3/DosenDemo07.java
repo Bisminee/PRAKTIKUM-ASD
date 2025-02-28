@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class DosenDemo07 {
     public static void main(String[] args) {
+        DataDosen07 arrOfDataDosen07 = new DataDosen07();
         Scanner sc = new Scanner(System.in);
         Dosen07 arrOfDosen[] = new Dosen07[3];
         String nama, kode, jenisKelamin;
@@ -31,6 +32,7 @@ public class DosenDemo07 {
             System.out.println("---------------------------------------");
         }
 
+        
         for (Dosen07 obj : arrOfDosen) {
             System.out.println("Kode Dosen: " + obj.kode );
             System.out.println("Nama Dosen: " + obj.nama );
@@ -42,6 +44,12 @@ public class DosenDemo07 {
             }
             System.out.println("---------------------------------------");
         }
+
+        arrOfDataDosen07.dataSemuaDosen(arrOfDosen);
+        arrOfDataDosen07.jumlahDosenPerJenisKelamin(arrOfDosen);
+        arrOfDataDosen07.rerataUsiaDosenPerJenisKelamin(arrOfDosen);
+        arrOfDataDosen07.infoDosenPalingTua(arrOfDosen);
+        arrOfDataDosen07.infoDosenPalingMuda(arrOfDosen);
 
     }
 }
