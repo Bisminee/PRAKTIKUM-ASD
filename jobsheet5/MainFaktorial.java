@@ -9,7 +9,9 @@ public class MainFaktorial {
         int nilai = input.nextInt();
         Faktorial fk = new Faktorial();
 
-        System.out.println("Nilai Faktorial " + nilai + " menggunakan BF: " + fk.faktorialBF(nilai));
-        System.out.println("Nilai Faktorial " + nilai + " menggunakan DC: " + fk.faktorialDC(nilai));
+        System.out.println("Nilai Faktorial " + nilai + " menggunakan BF: "
+                + fk.faktorialBF(nilai));
+        System.out.println("Nilai Faktorial " + nilai + " menggunakan DC: "
+                + fk.faktorialDC(nilai));
     }
 }
