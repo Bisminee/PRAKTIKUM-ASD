@@ -3,10 +3,10 @@ public class SortingMain07 {
 
     public static void main(String[] args) {
         int a[] = {20, 10, 2, 7, 12};
-        int b[] = {30, 20, 2, 8, 14};
-        int c[] = {40, 10, 4, 9, 3};
         Sorting07 dataUrut1 = new Sorting07(a, a.length);
+        int b[] = {30, 20, 2, 8, 14};
         Sorting07 dataUrut2 = new Sorting07(b, b.length);
+        int c[] = {40, 10, 4, 9, 3};
         Sorting07 dataUrut3 = new Sorting07(c, c.length);
 
         System.out.println("\nData Awal 1");
