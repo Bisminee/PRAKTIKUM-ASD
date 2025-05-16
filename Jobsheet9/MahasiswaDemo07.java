@@ -36,7 +36,7 @@ public class MahasiswaDemo07 {
                         System.out.print("Masukkan nilai(0-100): ");
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
-                        System.out.printf("Nilai Tugas 5s adalah %d\n", dinilai.nama, nilai);
+                        System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
                     }
                     break;
                 case 3:
