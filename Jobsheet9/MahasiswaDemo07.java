@@ -9,11 +9,11 @@ public class MahasiswaDemo07 {
         int pilih;
 
         do {
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            System.out.println("\nMenu:");
+            System.out.println("1. Mengumpulkan Tugas");
+            System.out.println("2. Menilai Tugas");
+            System.out.println("3. Melihat Tugas Teratas");
+            System.out.println("4. Melihat Daftar Tugas");
             System.out.print("Pilih: ");
             pilih = scan.nextInt();
             scan.nextLine();
