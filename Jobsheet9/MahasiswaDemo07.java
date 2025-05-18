@@ -14,6 +14,7 @@ public class MahasiswaDemo07 {
             System.out.println("2. Menilai Tugas");
             System.out.println("3. Melihat Tugas Teratas");
             System.out.println("4. Melihat Daftar Tugas");
+            System.out.println("5. Hitung Tugas Terkumpul");
             System.out.print("Pilih: ");
             pilih = scan.nextInt();
             scan.nextLine();
@@ -41,7 +42,9 @@ public class MahasiswaDemo07 {
                     break;
                 case 3:
                     Mahasiswa07 lihat = stack.peek();
+                    Mahasiswa07 lihatBott = stack.peekBott();
                     if (lihat != null) {
+                        System.out.println("Tugas pertama dikumpulkan oleh " + lihatBott.nama);
                         System.out.println("Tugas terakhir dikumpulkan oleh " + lihat.nama);
                     }
                     break;
@@ -50,9 +53,12 @@ public class MahasiswaDemo07 {
                     System.out.println("Nama\tNNIM\tKelas");
                     stack.print();
                     break;
+                case 5:
+                System.out.println("Jumlah tugas terkumpul: " + stack.HitungTugas());
+                    break;
                 default:
                     throw new AssertionError();
             }
-        } while (pilih >= 1 && pilih <= 4);
+        } while (pilih >= 1 && pilih <= 5);
     }
 }
