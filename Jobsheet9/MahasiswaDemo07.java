@@ -38,6 +38,8 @@ public class MahasiswaDemo07 {
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
@@ -54,7 +56,7 @@ public class MahasiswaDemo07 {
                     stack.print();
                     break;
                 case 5:
-                System.out.println("Jumlah tugas terkumpul: " + stack.HitungTugas());
+                    System.out.println("Jumlah tugas terkumpul: " + stack.HitungTugas());
                     break;
                 default:
                     throw new AssertionError();
