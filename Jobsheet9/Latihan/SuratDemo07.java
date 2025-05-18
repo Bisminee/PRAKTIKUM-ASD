@@ -9,11 +9,10 @@ public class SuratDemo07 {
         int pilih;
         do {
             System.out.println("\nMenu:");
-            System.out.println("1. Mengumpulkan Tugas");
-            System.out.println("2. Menilai Tugas");
-            System.out.println("3. Melihat Tugas Teratas");
-            System.out.println("4. Melihat Daftar Tugas");
-            System.out.println("5. Hitung Tugas Terkumpul");
+            System.out.println("1. Terima Surat Izin");
+            System.out.println("2. Proses Surat Izin");
+            System.out.println("3. Lihat Surat Izin Terakhir");
+            System.out.println("4. Cari Surat");
             System.out.print("Pilih: ");
             pilih = sc.nextInt();
             sc.nextLine();
@@ -30,20 +29,24 @@ public class SuratDemo07 {
                     System.out.print("durasi(jam): ");
                     int durasi = sc.nextInt();
                     sc.nextLine();
-                    Surat07 mhs = new Surat07(idSurat, nama, kelas, jenisIzin, durasi);
-                    stack.push(mhs);
-                    System.out.printf("Surat %s berhasil didata\n", mhs.namaMahasiswa);
+                    Surat07 surat = new Surat07(idSurat, nama, kelas, jenisIzin, durasi);
+                    stack.push(surat);
+                    System.out.printf("Surat %s berhasil didata\n", surat.namaMahasiswa);
                     break;
                 case 2:
-                    Surat07 diverifikasi = stack.pop();
+                    Surat07 diverifikasi = stack.peek();
                     if (diverifikasi != null) {
-                        System.out.println("Surat izin " + diverifikasi.namaMahasiswa + "");
+                        System.out.println("Surat izin " + diverifikasi.namaMahasiswa);
                         System.out.println("ID Surat\tNama\tKelas\tJenis Surat\tDurasi");
-                        System.out.println(diverifikasi.idSurat + "\t" + diverifikasi.namaMahasiswa + "\t" + diverifikasi.kelas
-                                + "\t" + diverifikasi.jenisIzin + "\t" + diverifikasi.durasi);
+                        System.out.println(diverifikasi.idSurat + "\t\t" + diverifikasi.namaMahasiswa + "\t" + diverifikasi.kelas
+                                + "\t" + diverifikasi.jenisIzin + "\t\t" + diverifikasi.durasi);
                         System.out.print("Apakah surat diverifikasi(y/n): ");
-                        char verifikasi = sc.nextLine().charAt(0);
-                        sc.nextLine();
+                        String verifikasi = sc.nextLine();
+                        if(verifikasi.equalsIgnoreCase("y")){
+                            diverifikasi = stack.pop();
+                        } else{
+                            break;
+                        }
                     }
                     break;
                 case 3:
