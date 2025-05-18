@@ -1,10 +1,10 @@
 
-public class StackKonversi {
+public class StackKonversi07 {
 
     int tumpukanBiner[];
     int size, top;
 
-    public StackKonversi() {
+    public StackKonversi07() {
         this.size = 32;
         tumpukanBiner = new int[size];
         top = -1;
@@ -19,8 +19,8 @@ public class StackKonversi {
     }
 
     public void push(int data) {
-        if (!isFull()) {
-            System.out.println("Stack penuh! Tidak bisa menambahkan tugas lagi.");
+        if (isFull()) {
+            System.out.println("Stack penuh!");
         } else {
             top++;
             tumpukanBiner[top] = data;
@@ -29,7 +29,7 @@ public class StackKonversi {
 
     public int pop() {
         if (isEmpty()) {
-            System.out.println("Stack kosong! Tidak ada tugas untuk dinilai.");
+            System.out.println("Stack kosong!");
             return -1;
         } else {
             int data = tumpukanBiner[top];
