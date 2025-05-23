@@ -17,6 +17,7 @@ public class QueueMain {
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan kapasitas queue: ");
         int n = sc.nextInt();
+        boolean lanjut = true;
         Queue Q = new Queue(n);
         int pilih;
         do {
@@ -26,17 +27,18 @@ public class QueueMain {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc.nextInt();
-                    Q.Enqueue(dataMasuk);
+                    lanjut = Q.Enqueue(dataMasuk);
                     break;
                 case 2:
                     int dataKeluar = Q.dequeue();
                     if (dataKeluar != 0) {
                         System.out.println("Data yang dikeluarkan: " + dataKeluar);
                         break;
+                    }else {
+                        lanjut = false;
                     }
                 case 3:
                     Q.print();
-                    ;
                     break;
                 case 4:
                     Q.peek();
@@ -45,6 +47,6 @@ public class QueueMain {
                     Q.clear();
                     break;
             }
-        } while (pilih >= 1 && pilih <= 5);
+        } while (pilih >= 1 && pilih <= 5 && lanjut);
     }
 }
