@@ -37,6 +37,7 @@ public class QueueMain {
                     }else {
                         lanjut = false;
                     }
+                    break;
                 case 3:
                     Q.print();
                     break;
