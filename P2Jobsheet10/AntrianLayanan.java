@@ -10,7 +10,7 @@ public class AntrianLayanan {
         this.max = max;
         this.data = new Mahasiswa[max];
         this.front = 0;
-        this.rear = 0 - 1;
+        this.rear = - 1;
         this.size = 0;
     }
 
@@ -35,6 +35,16 @@ public class AntrianLayanan {
             System.out.println("Mahasiswa terdepan: ");
             System.out.println("NIM - NAMA - PRODI - KELAS");
             data[front].tampilkanData();
+        } else {
+            System.out.println("Antrian masih kosong");
+        }
+    }
+
+    public void lihatTerakhir() {
+         if (!IsEmpty()) {
+            System.out.println("Mahasiswa terdepan: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
         } else {
             System.out.println("Antrian masih kosong");
         }
