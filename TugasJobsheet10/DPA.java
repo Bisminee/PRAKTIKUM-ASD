@@ -4,7 +4,7 @@ public class DPA {
     Mahasiswa ditampung[] = new Mahasiswa[30];
     String nip, nama, kode;
 
-    public DPA(Mahasiswa ditampung[], int n) {
+    public DPA() {
         this.nip = "2121212";
         this.nama = "Bisma";
         this.kode = "123";

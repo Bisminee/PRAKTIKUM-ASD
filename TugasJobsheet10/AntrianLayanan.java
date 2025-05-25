@@ -3,7 +3,7 @@ public class AntrianLayanan {
 
     Mahasiswa data[];
     int front, rear;
-    DPA dosen = new DPA(data, front);
+    DPA dosen;
     int size; //data yang sudah masuk
     int max; //ukuran Queue
 
