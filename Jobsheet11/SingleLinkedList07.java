@@ -12,14 +12,14 @@ public class SingleLinkedList07 {
     public void print() {
         if (!isEmpty()) {
             NodeMahasiswa07 tmp = head;
-            System.out.println("Isi Linked List");
+            System.out.println("\nIsi Linked List");
             while (tmp != null) {
                 tmp.data.tampilIformasi();
                 tmp = tmp.next;
             }
             System.out.println("");
         } else {
-            System.out.println("Linked List kosong");
+            System.out.println("\nLinked List kosong");
         }
     }
 
