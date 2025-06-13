@@ -7,7 +7,7 @@ public class DoubleLinkedList {
     public DoubleLinkedList(Node01 head, Node01 tail) {
         this.head = null;
         this.tail = null;
-    }
+    }      
 
     public DoubleLinkedList() {
     }
@@ -68,30 +68,44 @@ public class DoubleLinkedList {
 
     public void print() {
         Node01 current = head;
-        while (current != null) {
-            current.data.tampil();
-            current = current.next;
+        if(current == null){
+            System.out.println("Linked List Masih Kosong");
+        } else{
+            while (current != null) {
+                current.data.tampil();
+                current = current.next;
+            }
         }
+        
     }
 
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println(" Linked List masih Kosong, tidak dapat dihapus!");
-        } else if (head == tail) {
+            return;
+        } 
+        if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
+            head.prev = null;
         }
+        
     }
 
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("Linked List masih Kosong, tidak dapat dihapus!");
-        } else if (head == tail) {
+            return;
+        } 
+        if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;
+            tail.next = null;
         }
+        System.out.println("Data sudah dihapus. Data yang terhapus adalah: ");
+        tail.data.tampil();
     }
 
     public Node01 search(String nim) {
