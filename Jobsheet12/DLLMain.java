@@ -18,6 +18,7 @@ public class DLLMain {
             System.out.println("5. Tampilkan Data");
             System.out.println("6. Cari Mahasiswa Berdasarkan NIM");
             System.out.println("7. Sisipkan Data Mahasiswa");
+            System.out.println("8. Jumlah Mahasiswa");
             System.out.println("0. Keluar");
             System.out.print("Pilih Menu: ");
             pilihan = scan.nextInt();
@@ -37,7 +38,7 @@ public class DLLMain {
                     list.head.data.tampil();
                     list.removeFirst();
                 }
-                case 4 ->{
+                case 4 -> {
                     System.out.println("Data sudah dihapus. Data yang terhapus adalah: ");
                     list.tail.data.tampil();
                     list.removeLast();
@@ -60,6 +61,8 @@ public class DLLMain {
                     String nim = scan.nextLine();
                     list.insertAfter(nim, inputMahasiswa(scan));
                 }
+                case 8 ->
+                    System.out.println("Jumlah Mahasiswa: " + list.getSize()); 
                 case 0 ->
                     System.out.println("Keluar dari program");
                 default ->
